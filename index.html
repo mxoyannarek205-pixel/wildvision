@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildvision Tiraspol 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="#top" class="brand">WILD<b>VISION</b></a>
+    <nav class="topnav">
+      <a href="#news">Новости</a>
+      <a href="#artists">Участники</a>
+      <a href="#vote">Голосование</a>
+      <a href="#schedule">Расписание</a>
+      <a href="#rules">Правила</a>
+    </nav>
+  </div>
+
+  <header class="hero" id="top">
+    <img src="img/logo.svg" alt="Wildvision Tiraspol 2026" class="hero-logo">
+    <p class="hero-sub" id="subtitle"></p>
+    <div id="countdown" class="countdown"></div>
+    <div><a href="#artists" class="cta">Смотреть участников</a></div>
+  </header>
+
+  <section class="section" id="news">
+    <div class="section-head">
+      <div class="eyebrow">Лента</div>
+      <h2>Новости <span>проекта</span></h2>
+    </div>
+    <div id="news-list" class="grid"></div>
+  </section>
+
+  <section class="section" id="artists">
+    <div class="section-head">
+      <div class="eyebrow">Лайн-ап</div>
+      <h2>Участники <span>шоу</span></h2>
+    </div>
+    <div id="participants-list" class="grid"></div>
+  </section>
+
+  <section class="section" id="vote">
+    <div class="section-head">
+      <div class="eyebrow">Зрительское жюри</div>
+      <h2>Голосование <span>открыто</span></h2>
+    </div>
+    <div id="vote-status" class="vote-status"></div>
+    <div id="vote-list" class="grid"></div>
+    <p id="voted-note" class="voted-note" hidden>Спасибо, твой голос учтён!</p>
+  </section>
+
+  <section class="section" id="schedule">
+    <div class="section-head">
+      <div class="eyebrow">Программа</div>
+      <h2>Расписание <span>вечера</span></h2>
+    </div>
+    <div id="schedule-list" class="timeline"></div>
+  </section>
+
+  <section class="section" id="rules">
+    <div class="section-head">
+      <div class="eyebrow">Правила</div>
+      <h2>Как <span>всё устроено</span></h2>
+    </div>
+    <div class="card"><div id="rules-text" class="rules-text"></div></div>
+  </section>
+
+  <footer>
+    © Wildvision · Tiraspol 2026 · <a href="admin.html">Админка</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

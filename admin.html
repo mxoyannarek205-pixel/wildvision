@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildvision — Админка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Вход -->
+  <div id="login" class="login-wrap">
+    <div class="card login">
+      <img src="img/logo.svg" alt="Wildvision">
+      <h2 style="font-size:1.3rem">Вход в админку</h2>
+      <input id="email" type="email" placeholder="Email админа">
+      <input id="pw" type="password" placeholder="Пароль">
+      <button id="loginBtn">Войти</button>
+      <p id="loginErr" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Панель -->
+  <div id="panel" hidden>
+    <header class="admin-top">
+      <div class="brand">WILD<b>VISION</b> <span class="muted small">· админка</span></div>
+      <div class="actions">
+        <a href="index.html" class="muted small">На сайт →</a>
+        <button id="logout" class="ghost sm">Выйти</button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button data-tab="news" class="active">Новости</button>
+      <button data-tab="participants">Участники</button>
+      <button data-tab="schedule">Расписание</button>
+      <button data-tab="voting">Голосование</button>
+      <button data-tab="rules">Правила</button>
+      <button data-tab="settings">Настройки</button>
+      <button data-tab="data">Данные</button>
+    </nav>
+
+    <main id="pane" class="pane"></main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
